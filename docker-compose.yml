@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  bookmark-manager:
+    build: .
+    volumes:
+      - ./bookmarks:/bookmark-manager/bookmarks
+      - ./logs:/bookmark-manager/logs
+    ports:
+      - "8080:8080"
+    container_name: bookmark_manager
